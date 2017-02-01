@@ -4,7 +4,6 @@
  * Author:		Steven Roomberg
  * Description:	This is a promo website I've developed for my CS1520 course at the Univ of Pittsburgh.
  * */
-// stuff
 ?>
 
 <!DOCTYPE html>
