@@ -10,8 +10,8 @@
 <html>
 	<head>
 	  <title>Steven Roomberg</title>
-	  <link rel="stylesheet" type="text/css" href="style/style.css">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	  <!--Custom css--><link rel="stylesheet" type="text/css" href="style/style.css">
+	  <!--Bootstrap--><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	</head>
 	<body> <!--Two column, one-page scroll website -->
 		<div class="container-fluid">
@@ -26,7 +26,7 @@
 					</ul>
 				</div>
 				<!--Information section | Will be a full-page scroll-->
-				<div class="col-md-8" id="info">
+				<div class="col-md-8 info">
 					<div class="row" name="top">
 						<h1>Steven Emanuel Roomberg</h1>
 						<h2>Software Engineer</h2>
@@ -63,6 +63,7 @@
 			<div class="row" id="footer"></div>
 		</div>
 	</body>
-	<script type="text/javascript" src="script/script.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--Custom js--><script type="text/javascript" src="script/script.js"></script>
+	<!--Bootstrap--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--JQuery--><script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </html>
