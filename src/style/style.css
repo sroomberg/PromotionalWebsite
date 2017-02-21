@@ -1,6 +1,7 @@
-/*
-.navigation {  }
-.navigation ul {  }
+
+.navigation { height: 100vh; position: fixed; }
+.navigation ul { list-style-type: none; position: fixed; }
+.navigation ul li { margin: 15px auto; }
 .info {  }
-.info .row {  }
-*/
+.info .row { height: 100vh; padding: 5% 5%; }
+.separator { border-top: 2px solid; }
