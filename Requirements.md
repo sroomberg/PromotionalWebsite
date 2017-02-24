@@ -17,5 +17,3 @@
 		* Ex. Don't want to write your header and footer on each page for a multi page approach? Use an include file. Similarly, if you have a function that you will use over and over, that should also go into an include file.
 	* There are no hard requirements for what PHP to use and when. The best approach would be to use as many of the topics covered in class (appropriately) as necessary to make the site work and prove your ability
 	* If you are unsure on what to use or when/how to use it, please reach out to me or a TA
-
-## PLEASE DO NOT HESITATE TO ASK IF YOU NEED CLARIFICATION OR HELP WITH ANYTHING. I CANNOT STRESS THIS ENOUGH
