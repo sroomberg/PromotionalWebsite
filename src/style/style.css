@@ -3,4 +3,7 @@
 .navigation ul { list-style-type: none; position: fixed; }
 .navigation ul li { margin: 15px auto; }
 .info .row { display: flex; flex-direction: column; min-height: 100vh; padding: 5% 5%; }
+.info .row h2 { padding-bottom: 1em; }
 .separator { border-top: 2px solid; }
+.warning { color: red; };
+.success { color: green; };
