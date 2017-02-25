@@ -5,6 +5,7 @@
  * Description:	This is a promo website I've developed for my CS1520 course at the Univ of Pittsburgh.
  * */
 
+// project variables
 $project_root = './';
 $style_root = $project_root . 'style/';
 $script_root = $project_root . '/script/';
@@ -27,24 +28,23 @@ if (isset($_POST['submit'])) {
 	$email_body .= 'Subject: ' . $cf_subject . '\n\n';
 	$email_body .= 'Message: \n\t' . $cf_msg . '\n';
 
-	if (!isset($cf_name)) {
+	if (!$cf_name) {
 		$err_name = 'Please enter your name';
 	}
-	if (!isset($cf_email) || !filter_var($cf_email, FILTER_VALIDATE_EMAIL)) {
+	if (!$cf_email || !filter_var($cf_email, FILTER_VALIDATE_EMAIL)) {
 		$err_email = 'Please enter your email';
 	}
-	if (!isset($cf_subject)) {
+	if (!$cf_subject) {
 		$err_subject = 'Please enter a subject';
 	}
-	if (!isset($cf_msg)) {
-		$err_msg = 'Please enter a message';
-	}
 
-	if (isset($err_name) || isset($err_email) || isset($err_subject) || isset($err_msg)) {
-		$result = '<p class="warning">Please fix the above errors before sending your message.</p>';
-	}
-	else {
-		$result = '<p class="success">Your message was sent. Steven will get back to you in 1-2 days.</p>';
+	if (!$err_name && !$err_email && !$err_subject) {
+		if (mail($email_to, $email_subject, $email_body, $email_from)) {
+			$result = '<p class="success">Your message was sent. Steven will get back to you in 1-2 days.</p>';
+		}
+		else {
+			$result = '<p class="warning">Something went wrong please try again.</p>';
+		}
 	}
 }
 
@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
 	  <title>Steven Roomberg</title>
 	  <!--Favicon--><link rel="icon" href="<?php echo $img_root; ?>favicon.ico" type="image/x-icon">
 	  <!--Custom css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>style.css">
-	  <!--Bootstrap--><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	  <!--Bootstrap--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>bootstrap.min.css">
 	</head>
 	<body> <!--Two column, one-page scroll website -->
 		<div class="container-fluid">
@@ -64,16 +64,15 @@ if (isset($_POST['submit'])) {
 				<!--Navigation section | Pinned to left side of page as user scrolls-->
 				<div class="col-md-4 navigation">
 					<ul class="col-md-4 center-block text-center">
-						<li><a href="#top">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#education">Education</a></li>
-						<li><a href="#resume">Resume</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li><a class="page-scroll" href="#top">Home</a></li>
+						<li><a class="page-scroll" href="#about">About</a></li>
+						<li><a class="page-scroll" href="#education">Education</a></li>
+						<li><a class="page-scroll" href="#resume">Resume</a></li>
+						<li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
+						<li><a class="page-scroll" href="#contact">Contact</a></li>
 					</ul>
 					<div class="social-links">
 						<!--Social Links-->
-						<ul></ul>
 					</div>
 				</div>
 				<!--Information section | Will be a full-page scroll-->
@@ -249,7 +248,7 @@ if (isset($_POST['submit'])) {
 						<h2>Contact</h2>
 						<form class="contact-form" name="contact-form" role="form" method="post" action="index.php#contact">
 							<div class="form-item">
-								<label for="name" class="col-md-3 control-label">Name</label>
+								<label for="name" class="col-md-3 control-label">Name<span class="warning">*</span></label>
 								<div class="col-md-9">
 									<input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="" />
 									<?php echo '<p class="warning">'.(isset($err_name) ? $err_name : '').'</p>'; ?>
@@ -257,7 +256,7 @@ if (isset($_POST['submit'])) {
 							</div>
 							<div class="clearfix"></div>
 							<div class="form-item">
-								<label for="email" class="col-md-3 control-label">Email</label>
+								<label for="email" class="col-md-3 control-label">Email<span class="warning">*</span></label>
 								<div class="col-md-9">
 									<input type="text" class="form-control" id="email" name="email" placeholder="Email Address" value="" />
 									<?php echo '<p class="warning">'.(isset($err_email) ? $err_email : '').'</p>'; ?>
@@ -265,7 +264,7 @@ if (isset($_POST['submit'])) {
 							</div>
 							<div class="clearfix"></div>
 							<div class="form-item">
-								<label for="subject" class="col-md-3 control-label">Subject</label>
+								<label for="subject" class="col-md-3 control-label">Subject<span class="warning">*</span></label>
 								<div class="col-md-9">
 									<input type="text" class="form-control" id="subject" name="subject" placeholder="Email Subject" value="" />
 									<?php echo '<p class="warning">'.(isset($err_subject) ? $err_subject : '').'</p>'; ?>
@@ -275,10 +274,7 @@ if (isset($_POST['submit'])) {
 							<div class="form-item">
 								<label for="message" class="col-md-3 control-label">Message</label>
 								<div class="col-md-9">
-									<textarea name="message" form="contact-form" rows="10" cols="50" placeholder="Say hi!">
-										<?php if (isset($_POST['message'])) echo htmlspecialchars($_POST['message']); ?>
-									</textarea>
-									<?php echo '<p class="warning">'.(isset($err_msg) ? $err_msg : '').'</p>'; ?>
+									<textarea name="message" form="contact-form" rows="10" cols="50" placeholder="Say hi!"></textarea>
 								</div>
 							</div>
 							<div class="clearfix"></div>
@@ -301,7 +297,8 @@ if (isset($_POST['submit'])) {
 			<div class="row" id="footer"></div>
 		</div>
 	</body>
-	<!--Custom js--><script type="text/javascript" src="<?php echo $script_root; ?>script.js"></script>
-	<!--Bootstrap--><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!--JQuery--><script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<!--Bootstrap--><script type="text/javascript" src="<?php echo $script_root; ?>bootstrap.min.js"></script>
+	<!--Custom js--><script type="text/javascript" src="<?php echo $script_root; ?>script.js"></script>
+	<!--Smooth Scroll js--><script type="text/javascript" src="<?php echo $script_root; ?>smooth-scroll.js"></script>
 </html>
