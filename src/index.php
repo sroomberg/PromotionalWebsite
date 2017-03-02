@@ -10,6 +10,7 @@ $project_root = './';
 $style_root = $project_root . 'style/';
 $script_root = $project_root . '/script/';
 $img_root = $project_root . 'img/';
+$font_root = $project_root . 'fonts/';
 $include_root = $project_root . 'inc/';
 
 // include
@@ -45,7 +46,7 @@ include($include_root . 'contact.php');
 				<!--Information section | Will be a full-page scroll-->
 				<div class="col-md-8 info">
 					<a name="top"></a>
-					<div class="row" name="top">
+					<div class="row" name="top" id="top">
 						<h1>Steven Emanuel Roomberg</h1>
 						<h2>Software Engineer</h2>
 						<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
@@ -58,7 +59,7 @@ include($include_root . 'contact.php');
 					</div>
 					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="about"></a>
-					<div class="row" name="about">
+					<div class="row" name="about" id="about">
 						<h2>About Me</h2>
 						<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
 						<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
@@ -70,7 +71,7 @@ include($include_root . 'contact.php');
 					</div>
 					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="education"></a>
-					<div class="row" name="education">
+					<div class="row" name="education" id="education">
 						<h2>Education</h2>
 						<div id="resumeItem">
 							<div class="col-md-8">
@@ -93,7 +94,7 @@ include($include_root . 'contact.php');
 						
 					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="resume"></a>
-					<div class="row" name="resume">
+					<div class="row" name="resume" id="resume">
 						<h2>Professional Experience</h2>
 						<div id="resumeItem"><!--HMHS-->
 							<div class="col-md-8">
@@ -204,14 +205,14 @@ include($include_root . 'contact.php');
 					</div>
 					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="portfolio"></a>
-					<div class="row" name="portfolio">
+					<div class="row" name="portfolio" id="portfolio">
 						<h2>Portfolio</h2>
 						<!--This content will be added later-->
 						<em>This content will be added later</em>
 					</div>
 					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="contact"></a>
-					<div class="row" name="contact">
+					<div class="row" name="contact" id="contact">
 						<h2>Contact</h2>
 						<form class="contact-form" name="contact-form" role="form" method="post" action="index.php#contact">
 							<div class="form-item">
