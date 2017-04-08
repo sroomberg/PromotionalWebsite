@@ -1,10 +1,23 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+/* \Google Fonts */
 
+html { background: url(../img/bg.jpg) repeat !important; }
+body { background: rgba(255,255,255,0.4) !important; font-family: 'Ropa Sans', sans-serif !important; font-size: 18px !important; }
 small { font-style: italic; }
+a { color: #000000 !important; }
 .navigation { min-height: 100vh; position: fixed; margin-top: 4%; }
 .navigation ul { list-style-type: none; position: fixed; }
 .navigation ul li { margin: 15px auto; }
+#proPic { padding: 10px; width: 250px; height: 275px; }
 .info .row { display: flex; flex-direction: column; min-height: 100vh; padding: 5% 5%; }
 .info .row h2 { padding-bottom: 1em; }
-.separator { border-top: 2px solid; }
+.separator { border-top: 2px solid; } /* This separator will be removed once the website is finished. */
 .warning { color: red; };
 .success { color: green; };
+
+/* Responsiveness */
+@media only screen and (max-width: 1024px) {
+	#proPic { display: none !important; width: 0px !important; height: 0px !important; }
+}
+/* \Responsiveness */

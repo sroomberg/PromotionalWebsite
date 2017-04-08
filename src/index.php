@@ -10,7 +10,7 @@ $project_root = './';
 $style_root = $project_root . 'style/';
 $script_root = $project_root . '/script/';
 $img_root = $project_root . 'img/';
-$font_root = $project_root . 'fonts/';
+$font_root = $style_root . 'fonts/';
 $include_root = $project_root . 'inc/';
 
 // include
@@ -32,6 +32,7 @@ include($include_root . 'contact.php');
 				<!--Navigation section | Pinned to left side of page as user scrolls-->
 				<div class="col-md-4 navigation">
 					<ul class="col-md-4 center-block text-center">
+						<li><img id="proPic" src="<?php echo $img_root; ?>ProfilePicture.jpg" rel="profile_picture" /></li>
 						<li><a class="page-scroll" href="#top">Home</a></li>
 						<li><a class="page-scroll" href="#about">About</a></li>
 						<li><a class="page-scroll" href="#education">Education</a></li>
@@ -214,7 +215,7 @@ include($include_root . 'contact.php');
 					<a name="contact"></a>
 					<div class="row" name="contact" id="contact">
 						<h2>Contact</h2>
-						<form class="contact-form" name="contact-form" role="form" method="post" action="index.php#contact">
+						<form class="contact-form" id="contactForm" name="contact-form" role="form" method="post" action="index.php#contact">
 							<div class="form-item">
 								<label for="name" class="col-md-3 control-label">Name<span class="warning">*</span></label>
 								<div class="col-md-9">
@@ -242,7 +243,7 @@ include($include_root . 'contact.php');
 							<div class="form-item">
 								<label for="message" class="col-md-3 control-label">Message</label>
 								<div class="col-md-9">
-									<textarea name="message" form="contact-form" rows="10" cols="50" placeholder="Say hi!"></textarea>
+									<textarea name="message" form="contactForm" rows="10" cols="50" placeholder="Say hi!"></textarea>
 								</div>
 							</div>
 							<div class="clearfix"></div>
