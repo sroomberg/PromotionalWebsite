@@ -9,15 +9,17 @@ a { color: #000000 !important; }
 .navigation { min-height: 100vh; position: fixed; margin-top: 4%; }
 .navigation ul { list-style-type: none; position: fixed; }
 .navigation ul li { margin: 15px auto; }
-#proPic { padding: 10px; width: 250px; height: 275px; }
+#proPic { padding-bottom: 5%; }
+#proPic img { width: 250px; height: 275px; }
+#socialLinks { width: 75% !important; padding-top: 5%; }
+#socialLinks .fa { font-size: 2em !important; }
 .info .row { display: flex; flex-direction: column; min-height: 100vh; padding: 5% 5%; }
 .info .row h2 { padding-bottom: 1em; }
-.separator { border-top: 2px solid; } /* This separator will be removed once the website is finished. */
 .warning { color: red; };
 .success { color: green; };
 
 /* Responsiveness */
 @media only screen and (max-width: 1024px) {
-	#proPic { display: none !important; width: 0px !important; height: 0px !important; }
+	/*#proPic { display: none !important; width: 0px !important; height: 0px !important; }*/
 }
 /* \Responsiveness */

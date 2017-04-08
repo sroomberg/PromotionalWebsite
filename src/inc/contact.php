@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 			$cxn_msg = $cxn->real_escape_string($cf_msg);
 		}
 		$query = "INSERT INTO contact_form (cf_name,cf_email,cf_subject,cf_msg)
-					VALUES ('" . $cxn_name . "','" . $cxn_email . "','" . $cxn_subject . "','" . $cxn_msg . "')";
+					VALUES ('" . $cxn_name . "','" . $cxn_email . "','" . $cxn_subject . "','" . $cxn_msg . "');";
 
 		if (!$cxn->query($query)) {
 			die("QUERY ERROR: " . $cxn->error);

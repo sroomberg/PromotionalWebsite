@@ -25,6 +25,7 @@ include($include_root . 'contact.php');
 	  <!--Favicon--><link rel="icon" href="<?php echo $img_root; ?>favicon.ico" type="image/x-icon">
 	  <!--Custom css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>style.css">
 	  <!--Bootstrap--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>bootstrap.min.css">
+	  <!--Font Awesome--><link rel="stylesheet" type="text/css" href="<?php echo $font_root; ?>font-awesome/css/font-awesome.min.css">
 	</head>
 	<body> <!--Two column, one-page scroll website -->
 		<div class="container-fluid">
@@ -32,17 +33,31 @@ include($include_root . 'contact.php');
 				<!--Navigation section | Pinned to left side of page as user scrolls-->
 				<div class="col-md-4 navigation">
 					<ul class="col-md-4 center-block text-center">
-						<li><img id="proPic" src="<?php echo $img_root; ?>ProfilePicture.jpg" rel="profile_picture" /></li>
+						<li>
+							<div id=proPic>
+								<img src="<?php echo $img_root; ?>ProfilePicture.jpg" rel="profile_picture" />
+							</div>
+						</li>
 						<li><a class="page-scroll" href="#top">Home</a></li>
 						<li><a class="page-scroll" href="#about">About</a></li>
 						<li><a class="page-scroll" href="#education">Education</a></li>
 						<li><a class="page-scroll" href="#resume">Resume</a></li>
 						<li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
 						<li><a class="page-scroll" href="#contact">Contact</a></li>
+						<li>
+							<div class="row center-block" id="socialLinks">
+								<div class="col-md-4">
+									<a href="mailto:stevenroomberg@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+								</div>
+								<div class="col-md-4">
+									<a href="https://www.linkedin.com/in/sroomberg/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+								</div>
+								<div class="col-md-4">
+									<a href="https://github.com/sroomberg" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</li>
 					</ul>
-					<div class="social-links">
-						<!--Social Links-->
-					</div>
 				</div>
 				<!--Information section | Will be a full-page scroll-->
 				<div class="col-md-8 info">
@@ -58,7 +73,6 @@ include($include_root . 'contact.php');
 						<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? </p>
 						<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
 					</div>
-					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="about"></a>
 					<div class="row" name="about" id="about">
 						<h2>About Me</h2>
@@ -70,7 +84,6 @@ include($include_root . 'contact.php');
 						<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? </p>
 						<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.  </p>
 					</div>
-					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="education"></a>
 					<div class="row" name="education" id="education">
 						<h2>Education</h2>
@@ -92,8 +105,6 @@ include($include_root . 'contact.php');
 							</div>
 						</div>
 					</div>
-						
-					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="resume"></a>
 					<div class="row" name="resume" id="resume">
 						<h2>Professional Experience</h2>
@@ -204,7 +215,6 @@ include($include_root . 'contact.php');
 							<div class="clearfix"></div>
 						</div><!--/CRAFT-->
 					</div>
-					<!--These divs will be removed once content is added--><div class="separator"></div>
 					<a name="portfolio"></a>
 					<div class="row" name="portfolio" id="portfolio">
 						<h2>Portfolio</h2>
