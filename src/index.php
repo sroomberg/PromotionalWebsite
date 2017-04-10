@@ -36,6 +36,7 @@ include($include_root . 'contact.php');
 		</script>
 
 		<title>Steven Roomberg</title>
+		<meta name="viewport" content="width=device-width">
 		<!--Favicon--><link rel="icon" href="<?php echo $img_root; ?>favicon.ico" type="image/x-icon">
 		<!--Custom css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>style.css">
 		<?php if (isset($_COOKIE['mobile']) && $_COOKIE['mobile'] == 1) { ?>
