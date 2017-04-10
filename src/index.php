@@ -15,30 +15,44 @@ $include_root = $project_root . 'inc/';
 
 // include
 include($include_root . 'contact.php');
-
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Steven Roomberg</title>
-	  <!--Favicon--><link rel="icon" href="<?php echo $img_root; ?>favicon.ico" type="image/x-icon">
-	  <!--Custom css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>style.css">
-	  <!--Bootstrap--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>bootstrap.min.css">
-	  <!--Font Awesome--><link rel="stylesheet" type="text/css" href="<?php echo $font_root; ?>font-awesome/css/font-awesome.min.css">
+		<!--test init width for mobile stylesheet-->
+		<script>
+			window.onload = (
+				function() {
+					var width = window.innerWidth;
+					if (width <= 1024) {
+						document.cookie = 'mobile=1';
+					}
+					else {
+						document.cookie = 'mobile=0';
+					}
+				}
+			);
+		</script>
+
+		<title>Steven Roomberg</title>
+		<!--Favicon--><link rel="icon" href="<?php echo $img_root; ?>favicon.ico" type="image/x-icon">
+		<!--Custom css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>style.css">
+		<?php if (isset($_COOKIE['mobile']) && $_COOKIE['mobile'] == 1) { ?>
+			<!--Mobile css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>responsive.css">
+		<?php } ?>
+		<!--Bootstrap--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>bootstrap.min.css">
+		<!--Font Awesome--><link rel="stylesheet" type="text/css" href="<?php echo $font_root; ?>font-awesome/css/font-awesome.min.css">
 	</head>
 	<body>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				var width = $(window).width();
-				if (width > 1024) {
-					<?php include('container.php'); ?>
-				}
-				else {
-					<?php include('container-mobile.php'); ?>
-				}
-			});
-		</script>
+		<?php
+		if (isset($_COOKIE['mobile']) && $_COOKIE['mobile'] == 1) {
+			include('container-mobile.php');
+		}
+		else {
+			include('container.php');
+		}
+		?>
 	</body>
 	<!--JQuery--><script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<!--Bootstrap--><script type="text/javascript" src="<?php echo $script_root; ?>bootstrap.min.js"></script>

@@ -1,10 +1,7 @@
-<!-- I am including the style here so I don't have to call the js more than once. -->
-<style type="text/css">
-	<?php include($style_root . 'responsive.css'); ?>
-</style>
+
 <div class="container-fluid mobile-container">
 	<div class="row">
-		<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs navbar navbar-fixed-top">
 			<li class="dropdown" role="presentation">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					Menu <span class="caret"></span>

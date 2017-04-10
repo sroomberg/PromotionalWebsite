@@ -52,7 +52,7 @@
 				<h4>HM Health Solutions &#124; Pittsburgh, PA</h4>
 			</div>
 			<div class="col-md-4">
-				<h4>May 2017 - August 2017</h4>
+				<h4 id="date">May 2017 - August 2017</h4>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
@@ -73,7 +73,7 @@
 				<h4>Send Off App &#124; Pittsburgh, PA</h4>
 			</div>
 			<div class="col-md-4">
-				<h4>September 2015 - January 2016</h4>
+				<h4 id="date">September 2015 - January 2016</h4>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
@@ -90,7 +90,7 @@
 				<h4>The Pitt News &#124; Pittsburgh, PA</h4>
 			</div>
 			<div class="col-md-4">
-				<h4>June 2015 - December 2015</h4>
+				<h4 id="date">June 2015 - December 2015</h4>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
@@ -107,7 +107,7 @@
 				<h4>Mahlet Consulting &#124; Columbia, MD</h4>
 			</div>
 			<div class="col-md-4">
-				<h4>May 2015 - August 2015</h4>
+				<h4 id="date">May 2015 - August 2015</h4>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
@@ -124,7 +124,7 @@
 				<h4>Conva &#124; Pittsburgh, PA</h4>
 			</div>
 			<div class="col-md-4">
-				<h4>August 2014 - October 2014</h4>
+				<h4 id="date">August 2014 - October 2014</h4>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
@@ -141,7 +141,7 @@
 				<h4>CRAFT &#124; Media/Digital &#124; Washington, D.C.</h4>
 			</div>
 			<div class="col-md-4">
-				<h4>January 2014 - June 2014</h4>
+				<h4 id="date">January 2014 - June 2014</h4>
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">

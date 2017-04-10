@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
 /* \Google Fonts */
 
-html { background: url(../img/bg.jpg) repeat !important; }
+html { background: url(../img/bg.jpg) repeat !important; min-width: 1024px !important; /*overflow-x: scroll !important;*/ }
 body { background: rgba(255,255,255,0.4) !important; font-family: 'Ropa Sans', sans-serif !important; font-size: 18px !important; }
 small { font-style: italic; }
 a { color: #000000 !important; }
-.navigation { min-height: 100vh; margin-top: 4%; }
+.navigation { min-height: 100vh !important; margin-top: 4%; }
 .navigation ul { list-style-type: none; position: fixed; }
 .navigation ul li { margin: 15px auto; }
 #proPic { padding-bottom: 5%; }
@@ -15,5 +15,11 @@ a { color: #000000 !important; }
 #socialLinks .fa { font-size: 2em !important; }
 .info .row { display: flex; flex-direction: column; min-height: 100vh; padding: 5% 5%; }
 .info .row h2 { padding-bottom: 1em; }
+#resumeItem #date { text-align: right !important; }
 .warning { color: red; };
 .success { color: green; };
+
+/*@media only screen and (max-width: 1024px) {
+	.navigation, .info { position: fixed !important; }
+
+}*/
