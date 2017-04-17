@@ -40,7 +40,7 @@ include($include_root . 'contact.php');
 		<!--Favicon--><link rel="icon" href="<?php echo $img_root; ?>favicon.ico" type="image/x-icon">
 		<!--Custom css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>style.css">
 		<?php if (isset($_COOKIE['mobile']) && $_COOKIE['mobile'] == 1) { ?>
-			<!--Mobile css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>responsive.css">
+			<!--Mobile css--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>mobile.css">
 		<?php } ?>
 		<!--Bootstrap--><link rel="stylesheet" type="text/css" href="<?php echo $style_root; ?>bootstrap.min.css">
 		<!--Font Awesome--><link rel="stylesheet" type="text/css" href="<?php echo $font_root; ?>font-awesome/css/font-awesome.min.css">

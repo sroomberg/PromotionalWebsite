@@ -6,22 +6,26 @@ html { background: url(../img/bg.jpg) repeat !important; }
 body { background: rgba(255,255,255,0.4) !important; font-family: 'Ropa Sans', sans-serif !important; font-size: 18px !important; }
 small { font-style: italic; }
 a { color: #000000 !important; }
-.container-fluid { min-width: 1024px !important; overflow-x: scroll; }
+/*.container-fluid { min-width: 1024px !important; }*/
 .navigation { min-height: 100vh !important; margin-top: 4%; }
-.navigation, .navigation ul { min-width: 332px !important; }
+/*.navigation, .navigation ul { min-width: 332px !important; }*/
 .navigation ul { list-style-type: none; position: fixed; }
 .navigation ul li { margin: 15px auto; }
 #proPic { padding-bottom: 5%; }
 #proPic img { width: 250px; height: 275px; }
 #socialLinks { width: 75% !important; padding-top: 5%; }
 #socialLinks .fa { font-size: 2em !important; }
-.info, .info .row { min-width: 672px !important; }
+/*.info, .info .row { min-width: 672px !important; }*/
 .info .row { display: flex; flex-direction: column; min-height: 100vh; padding: 5% 5%; }
 .info .row h2 { padding-bottom: 1em; }
 #resumeItem #date { text-align: right !important; }
 .warning { color: red; };
 .success { color: green; };
 
-@media (max-width: 992px) {
-	.navigation, .info { position: fixed !important; overflow-x: scroll; }
-}
+/*Responsiveness -- These identifiers will be toggled one window resize*/
+.responsive.container-fluid { width: 1024px !important; min-width: 1024px !important; }
+/*.responsive.container-fluid > .row { overflow-x: scroll !important; }*/
+.responsive.navigation { float: left; position: relative; width: 10% !important; }
+.responsive #proPic { display: none !important; }
+.responsive #socialLinks .fa { font-size: 1.5em !important; padding-top: 5% !important; }
+.responsive.info { width: 672px !important; min-width: 672px !important; padding-left: 10% !important; padding-right: 10% !important; }

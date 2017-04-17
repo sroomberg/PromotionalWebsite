@@ -31,5 +31,4 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
-	<div class="row" id="footer"></div>
 </div>
