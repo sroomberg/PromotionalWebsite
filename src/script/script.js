@@ -3,7 +3,7 @@
 $(window)
 	.ready(function() { // special case for smaller screen size on refresh before cookie is set
 		var windowWidth = $(window).width();
-		if (document.cookie == "mobile=0" && windowWidth <= 1024) {
+		if (windowWidth <= 1024) {
 			$('div.navigation').removeClass('col-md-4');
 			$('div.info').removeClass('col-md-8');
 
@@ -15,7 +15,7 @@ $(window)
 	})
 	.resize(function() {
 		var windowWidth = $(window).width();
-		if (document.cookie == "mobile=0" && windowWidth <= 1024) {
+		if (windowWidth <= 1024) {
 			$('div.navigation').removeClass('col-md-4');
 			$('div.info').removeClass('col-md-8');
 
@@ -23,5 +23,18 @@ $(window)
 			$('div.navigation').addClass('responsive');
 			$('div.info').addClass('responsive');
 			$('div.container-fluid').addClass('responsive');
+		}
+		else {
+			if ($('div.navigation').hasClass('responsive')) {
+				$('div.navigation').removeClass('responsive');
+				$('div.navigation').addClass('col-md-4');
+			}
+			if ($('div.info').hasClass('responsive')) {
+				$('div.info').removeClass('responsive');
+				$('div.info').addClass('col-md-8');
+			}
+			if ($('div.container-fluid').hasClass('responsive')) {
+				$('div.container-fluid').removeClass('responsive');
+			}
 		}
 	});
