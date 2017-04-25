@@ -4,7 +4,7 @@
 		<h2 class="header">Software Engineer</h2>
 		<div class="section-info">
 			<p>My name is Steven Roomberg. I am a recent graduate of the University of Pittsburgh with a Bachelor's of Science in Computer Science.</p>
-			<p>Beginning in 2017, I will be located in the greater Boston area.</p>
+			<p>Beginning in the latter half of 2017, I will be located in the greater Boston area.</p>
 			<p>I have worked in a myriad of industries as an employee and a freelance developer.</p>
 			<p>Please feel free to look around and contact me if you would like to connect.</p>
 		</div>
@@ -22,11 +22,23 @@
 			</div>
 			<div class="clearfix"></div>
 			<div class="col-md-12">
-				<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
+				<p>Throughout my time at the University of Pittsburgh, I have been involved in a myriad of educational and outside-the-classroom activities and organizations.</p>
 
-				<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+				<p>Inside and outside the classroom, I have made it a point to study subjects not directly related to my computer science major. These subjects include, but are not limited to:
+				<ul>
+					<li>Finance</li>
+					<li>Economics</li>
+					<li>Accounting</li>
+					<li>Philosophy - <em>specifically, Game Theory</em></li>
+					<li>Political Science</li>
+				</ul></p>
 
-				<p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
+				<p>Regarding my extracurricular activities and leadership positions, I have primarily been involved in the judo club at the University of Pittsburgh. Prior to coming to Pitt, I had been practicing judo since I was 13 years old. Within months of starting with the Pitt Judo Club, I became involved as an officer - holding positions as President, Vice President, and Business Manager. Under my leadership, I:
+				<ul>
+					<li>Expanded club membership from &lt;10 active (weekly) members to &gt;30-50 active (weekly) members.</li>
+					<li>Raised money and acquired funding from the student government to subsidize tournament-related travel and expenses.</li>
+					<li>Started and coached a competition team to travel and compete at local-, regional-, and national-level tournaments.</li>
+				</ul></p>
 			</div>
 		</div>
 	</div>
